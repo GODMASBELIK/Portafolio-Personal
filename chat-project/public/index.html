@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat con WebSockets</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            margin: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #chat {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 10px;
+            width: 100%;
+            flex-grow: 1;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .message {
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            background: #8f5acf;
+            display: inline-block;
+            max-width: 70%;
+            word-wrap: break-word;
+            font-size: 20px;
+        }
+
+        .message-left {
+            background: #9b59b6;
+            align-self: flex-start;
+        }
+
+        .message-right {
+            background: #0277bd;
+            align-self: flex-end;
+        }
+
+        #message {
+            padding: 10px;
+            width: 90%;
+            margin: 10px 0;
+            border: none;
+            background-color: #fff;
+            color: #000;
+        }
+
+        #sendImage {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #sendImage:hover {
+            background-color: #388E3C;
+        }
+
+        #logoutBtn {
+            top: 10px;
+            right: 10px;
+            padding: 10px 15px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 15px;
+        }
+
+        #logoutBtn:hover {
+            background-color: #b71c1c;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #2e235b;
+            height: 60px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #message-container {
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Chat con WebSockets</h2>
+        <button id="logoutBtn">Cerrar sesión</button>
+    </nav>
+    
+    <div id="chat"></div>
+    <div id="message-container">
+        <input id="message" type="text" placeholder="Escribe tu mensaje">
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        <button id="sendImage">📷</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script>
+        if (!localStorage.getItem("token")) {
+            alert("Debes iniciar sesión primero.");
+            window.location.href = "login"; 
+        }
+
+        let socket;
+        let token = localStorage.getItem("token");
+
+        const userColors = new Map();
+        let username = "";
+
+        if (token) {
+            const decodedToken = jwt_decode(token); 
+            username = decodedToken.username; 
+        }
+
+        function conexion() {
+            socket = new WebSocket("ws://192.168.1.33:8085", token);
+
+            socket.onopen = async () => {
+                console.log("Conectado al WebSocket");
+                await fetchMensajes();
+                cargarMensajesDesdeCache(); 
+            };
+
+            socket.onmessage = (event) => {
+                const message = event.data;
+                let data;
+
+                try {
+                    data = JSON.parse(message);
+
+                    if (data.error === "TOKEN_EXPIRED" || data.error === "SAME_SESSION") {
+                        alert("Tu sesión ha expirado, por favor inicia sesión nuevamente.");
+                        localStorage.removeItem("token");
+                        localStorage.removeItem("mensajes"); 
+                        window.location.href = "/login";
+                        return;
+                    }
+
+                    if (data.tipo === "imagen") {
+                        let url = JSON.parse(data.mensaje);
+                        formatoChat(data.autor, `<img src="${url.mensaje}" alt="Imagen" style="max-width: 100%; border-radius: 10px;">`, userColors.get(data.autor));
+                    } else {
+                        formatoChat(data.autor, data.mensaje, userColors.get(data.autor));
+                    }
+
+                } catch (e) {
+                    console.error("Error al analizar el mensaje:", e);
+                    return;
+                }
+
+                if (!userColors.has(data.autor)) {
+                    userColors.set(data.autor, colorParaUsuarios());
+                }
+
+                guardarMensajeEnCache(data);
+            };
+
+            function guardarMensajeEnCache(mensaje) {
+                let mensajesGuardados = JSON.parse(localStorage.getItem("mensajes")) || []; 
+                mensajesGuardados.push(mensaje);
+                localStorage.setItem("mensajes", JSON.stringify(mensajesGuardados));
+            }
+
+            function cargarMensajesDesdeCache() {
+                let mensajesGuardados = JSON.parse(localStorage.getItem("mensajes")) || [];
+                mensajesGuardados.forEach(msg => {
+                    if (!userColors.has(msg.autor)) {
+                        userColors.set(msg.autor, colorParaUsuarios());
+                    }
+                    formatoChat(msg.autor, msg.mensaje, userColors.get(msg.autor));
+                });
+            }
+        }
+
+        function mensaje() {
+            const message = document.getElementById("message").value;
+            if (message && socket.readyState === WebSocket.OPEN) {
+                socket.send(message);
+                document.getElementById("message").value = "";
+            }
+        }
+
+        async function fetchMensajes() {
+            try {
+                const response = await fetch("http://192.168.1.33:8085", {
+                    headers: { "Authorization": `Bearer ${token}` } 
+                });
+
+                if (!response.ok) {
+                    throw new Error('Error en la respuesta del servidor: ' + response.statusText);
+                }
+
+                const mensajes = await response.json();
+
+                mensajes.forEach(msg => {
+                    if (!userColors.has(msg.autor)) {
+                        userColors.set(msg.autor, colorParaUsuarios());
+                    }
+                    formatoChat(msg.autor, msg.mensaje, userColors.get(msg.autor));
+                });
+            } catch (error) {
+                console.error("Error al cargar los mensajes:", error);
+            }
+        }
+
+        function formatoChat(autor, mensaje, color) {
+    const chat = document.getElementById("chat");
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("message");
+
+    if (autor === username) {
+        messageElement.classList.add("message-right");
+    } else {
+        messageElement.classList.add("message-left");
+    }
+
+    let messageContent;
+    try {
+        const parsedMessage = JSON.parse(mensaje); 
+
+        if (mensaje.includes("data:image")) {
+            messageContent = `<strong style="color: ${color}; display: block; margin-bottom: 10px;">${autor}:</strong> <img src="${parsedMessage.mensaje}" alt="Imagen"">`;
+        } else {
+            messageContent = `<strong style="color: ${color}; display: block; margin-bottom: 10px;">${autor}:</strong> ${mensaje}`;
+        }
+    } catch (error) {
+        messageContent = `<strong style="color: ${color}">${autor}:</strong> ${mensaje}`;
+    }
+
+    messageElement.innerHTML = messageContent;
+    chat.appendChild(messageElement);
+    chat.scrollTop = chat.scrollHeight;
+}
+
+
+        function colorParaUsuarios() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        const input = document.querySelector("input");
+
+        input.addEventListener("keydown", (event) => {
+            if(event.key === "Enter") {
+                mensaje();
+            }
+        });
+
+        conexion();
+
+        document.getElementById("logoutBtn").addEventListener("click", cerrarSesion);
+
+        function cerrarSesion() {
+            localStorage.removeItem("token");
+            window.location.href = "/login";
+        }
+
+        document.getElementById("sendImage").addEventListener("click", () => {
+            document.getElementById("imageInput").click();
+        });
+
+        document.getElementById("imageInput").addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onloadend = function () {
+                    const base64Image = reader.result;
+                    socket.send(JSON.stringify({
+                        autor: username, 
+                        mensaje: base64Image,
+                        tipo: "imagen"
+                    }));
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
