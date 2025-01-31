@@ -1,0 +1,82 @@
+{
+    "2": {
+        "matricula": "BBBBCCC",
+        "modelo": "ALM",
+        "marca": "Buick",
+        "potencia": "222",
+        "velocidadMax": "777",
+        "imagen": "img\/BBBBCCC_840_560.jpeg"
+    },
+    "3": {
+        "matricula": "CCLMNAA",
+        "modelo": "ZZZ",
+        "marca": "Land Rover",
+        "potencia": "999",
+        "velocidadMax": "210",
+        "imagen": "img\/CCLMNAA_Pontiac-GTO-1280x720.jpeg"
+    },
+    "4": {
+        "matricula": "29JKMNA",
+        "modelo": "Prime",
+        "marca": "Pagani",
+        "potencia": "555",
+        "velocidadMax": "666",
+        "imagen": "img\/29JKMNA_15f36340d818d6b1daa0f0a3b47df027.jpg"
+    },
+    "5": {
+        "matricula": "N25ALMN",
+        "modelo": "Kodiaq",
+        "marca": "Skoda",
+        "potencia": "631",
+        "velocidadMax": "743",
+        "imagen": "img\/N25ALMN_skoda-kodiaq-front-view.jpg"
+    },
+    "6": {
+        "matricula": "MNQEKJA",
+        "modelo": "Eldorado-Biatrizz",
+        "marca": "Cadillac",
+        "potencia": "123",
+        "velocidadMax": "773",
+        "imagen": "img\/MNQEKJA_770806_poster.jpg"
+    },
+    "7": {
+        "matricula": "U213LZL",
+        "modelo": "SUV",
+        "marca": "Toyota",
+        "potencia": "153",
+        "velocidadMax": "235",
+        "imagen": "img\/U213LZL_article-suv-toyota-c-hr-rav4-test-the-best-582076ba65bbc.jpeg"
+    },
+    "8": {
+        "matricula": "ZZ99KJY",
+        "modelo": "Chiron",
+        "marca": "Bugatti",
+        "potencia": "1020",
+        "velocidadMax": "720",
+        "imagen": "img\/ZZ99KJY_bugatti-chiron-velocidad-maxima-495572.jpg"
+    },
+    "9": {
+        "matricula": "R4USSLM",
+        "modelo": "Abrahms Taurus",
+        "marca": "Volvo",
+        "potencia": "50",
+        "velocidadMax": "60",
+        "imagen": "img\/R4USSLM_1200px-M1A_Abrams_im_Taunus.jpg"
+    },
+    "10": {
+        "matricula": "AA2AAWD",
+        "modelo": "ALM",
+        "marca": "Acura",
+        "potencia": "232",
+        "velocidadMax": "323",
+        "imagen": "img\/AA2AAWD_full.jpg"
+    },
+    "11": {
+        "matricula": "A3AAAAF",
+        "modelo": "ASD",
+        "marca": "Acura",
+        "potencia": "231",
+        "velocidadMax": "123",
+        "imagen": "img\/A3AAAAF_acura-tlx-type-s-8.jpg"
+    }
+}

@@ -1,0 +1,83 @@
+[13-Jan-2025 18:35:21 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:165
+[13-Jan-2025 18:35:21 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:165
+[13-Jan-2025 18:35:21 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:165
+[13-Jan-2025 18:35:21 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:165
+[13-Jan-2025 18:35:21 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 165
+[13-Jan-2025 18:35:21 UTC] PHP Stack trace:
+[13-Jan-2025 18:35:21 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:35:21 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:165
+[13-Jan-2025 18:39:04 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:247
+[13-Jan-2025 18:39:04 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:247
+[13-Jan-2025 18:39:04 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:247
+[13-Jan-2025 18:39:04 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:247
+[13-Jan-2025 18:39:04 UTC] PHP Warning:  Undefined array key "precio" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php on line 247
+[13-Jan-2025 18:39:04 UTC] PHP Stack trace:
+[13-Jan-2025 18:39:04 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:0
+[13-Jan-2025 18:39:04 UTC] PHP   2. htmlspecialchars($string = NULL) C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\menu.php:247
+[13-Jan-2025 19:26:07 UTC] PHP Warning:  Undefined variable $lol in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\baja.php on line 274
+[13-Jan-2025 19:26:07 UTC] PHP Stack trace:
+[13-Jan-2025 19:26:07 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\baja.php:0
+[13-Jan-2025 19:27:16 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\baja.php on line 22
+[13-Jan-2025 19:27:16 UTC] PHP Stack trace:
+[13-Jan-2025 19:27:16 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\baja.php:0
+[13-Jan-2025 19:27:16 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\baja.php on line 271
+[13-Jan-2025 19:27:16 UTC] PHP Stack trace:
+[13-Jan-2025 19:27:16 UTC] PHP   1. {main}() C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\baja.php:0
+[13-Jan-2025 19:39:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method DAO::existeVehiculo() in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\procesar.php:18
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\DWES\DWES\projectoprojectis\procesar.php on line 18
