@@ -1,0 +1,241 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+@font-face {
+    font-family: "Ambit";
+    src: url("Ambit/AmbitRegular.otf") format("opentype");
+}
+@font-face {
+    font-family: "AmbitSemiBold";
+    src: url("Ambit/Ambit\ SemiBold.otf") format("opentype");
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+main h1 {
+    font-family: "AmbitSemiBold", serif;
+    font-size: 28px;
+}
+
+main p {
+    font-family: "Ambit" , serif;
+}
+
+main a {
+    align-items: center;
+    font-weight: 500;
+    font-family: "Ambit" , serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
+html {
+    overflow-x: hidden;
+}
+.first {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 52px;
+    height: 70px;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.btn-start {
+    padding: 12px;
+    color: white;
+    background-color: #314EBE;
+    font-weight: 500;
+    outline: 0;
+    border: 0;
+    border-radius: .2em;
+    font-size: 16px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left {
+display: flex;
+align-items: center;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button > span {
+    display: block;
+    width: 60%;
+    background-color: black;
+    height: 2px;
+    margin: 6px auto;
+}
+
+.second {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    background-color: #FCFAE6;
+    padding: 0 60px;
+
+}
+
+.second ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+    gap: 2.5rem;
+}
+
+.second li {
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.second a {
+    display: block;
+    padding: 0 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.second ul:hover:has(li:hover) li {
+    opacity: 0.5;
+}
+
+.second li:hover {
+    opacity: 1 !important;
+}
+
+.arrow {
+    position: absolute;
+    width: 48px;
+    height: 100%;
+    top: 0;
+    right:0;
+    background-image: url("66831.png");
+    background-color: #fcfae6;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #E4E4E4;
+}
+
+.back {
+    opacity: 1;
+}
+
+
+p:first-child {
+    font-size: 12.5px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+
+main a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+main .container {
+    padding: 40px;
+
+}
+
+main .container .content {
+    max-width: 580px;
+}
+
+.opacity {
+    color: rgb(102, 102, 102);
+}
+
+.card {
+    padding: 24px;
+    text-align: center;
+
+background: #FF9D7E;
+background: linear-gradient(315deg, #ff9c7e96, #FFECE6 50%);
+}
+nav {
+    position: sticky;
+    top: 0;
+}
+.card p {
+    padding: 5px 80px;
+    line-height: 1.5;
+}
+
+.card h2 {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "AmbitSemiBold";
+    margin: 0;
+}
+
+.place-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav li {
+    display: block;
+    font-size: 16px;
+    font-family: "Ambit";
+}
+
+.content h3 {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: "AmbitSemiBold";
+    margin: 20px 0;
+
+}
+
+.content ul {
+    margin: 24px 0;
+}
+
+.content li {
+    margin-left: 28px;
+    list-style-type: none;
+}
+
